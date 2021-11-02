@@ -1,187 +1,141 @@
-/* 背景アニメーション設定*/ 
-html {
-  height:100%;
-}
+@charset "utf-8";
 
 body {
-  margin:0;
+  padding-top: 90px; 
+  background-color: #333;
+  color: white;
+  width: 900px;
+  margin: 20px auto;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  color: deeppink;
+}
+header {
+  width: 100%; 
+  height: 50px; 
+  background: #333; 
+  padding: 20px 50px; 
+  box-sizing: border-box; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  display: flex; 
+  align-items: center; 
+  color: white;
 }
 
-.bg {
-  animation:slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, pink 50%, khaki 50%);
-  bottom:0;
-  left:-50%;
-  opacity:.5;
-  position:fixed;
-  right:-50%;
-  top:0;
-  z-index:-1;
+
+header .gnav .menu {
+  display: flex; 
 }
 
-.bg2 {
-  animation-direction:alternate-reverse;
-  animation-duration:4s;
+header .gnav .menu li {
+  list-style: none; 
+  
 }
 
-.bg3 {
-  animation-duration:5s;
+header .a{
+  color: #fff;
 }
 
-.content {
-  background-color:rgba(255,255,255,.8);
-  border-radius:.25em;
-  box-shadow:0 0 .25em rgba(0,0,0,.25);
-  box-sizing:border-box;
-  left:50%;
-  padding:10vmin;
-  position:fixed;
-  text-align:center;
-  top:50%;
-  transform:translate(-50%, -50%);
+header .a:hover{
+  color: deeppink;
 }
 
-h1 {
-  font-family:monospace;
+header .gnav .menu li + li {
+  margin-left: 40px; 
+}
+.formidx{
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
-@keyframes slide {
-  0% {
-    transform:translateX(-25%);
+main {
+  height: 100vw; 
+}
+
+nav{
+  text-align: right;
+  padding: 5px;
+}
+nav li{
+  list-style-type: none;
+  display: inline;
+  padding: 0px 10px;
+}
+
+
+article{
+  float: left;
+  width: 620px;;
+}
+
+aside{
+  float: right;
+  width: 180px;
+}
+
+footer{
+  clear: both;
+}
+
+section{
+  text-align: center;
+}
+
+.foot-wrap {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.foot-wrap .menu-left, .menu-center, .menu-right {
+  display: inline-block;
+  width: 20%;
+  margin: 50px auto;
+}
+
+.foot-wrap ul {
+  list-style: none;
+  padding: 0;
+  line-height:40px;
+}
+
+.foot-wrap h3 {
+  border-bottom: 3px solid #2ac5b3;
+  padding: 10px;
+}
+
+.foot-wrap a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.foot-wrap a:hover {
+  color: deeppink;
+}
+
+.foot-wrap .cmark {
+  display: block;
+  padding: 10px;
+  border-top: 1px solid gray;
+  width: 80%;
+  margin: 0 auto;
+  color: gray;
+}
+
+@media screen and (max-width: 900px) {
+  .foot-wrap .menu-left, .menu-center, .menu-right {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
   }
-  100% {
-    transform:translateX(25%);
+  .foot-wrap .cpr {
+      display: inline;
   }
-}
-
-/* ボタン設定 */
-*,
-*:before,
-*:after {
--webkit-box-sizing: inherit;
-box-sizing: inherit;
-}
-
-html {
--webkit-box-sizing: border-box;
-box-sizing: border-box;
-font-size: 62.5%;
-}
-
-.btn,
-a.btn,
-button.btn {
-font-size: 1.6rem;
-font-weight: 700;
-line-height: 1.5;
-position: relative;
-display: inline-block;
-padding: 1rem 4rem;
-cursor: pointer;
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
-user-select: none;
--webkit-transition: all 0.3s;
-transition: all 0.3s;
-text-align: center;
-vertical-align: middle;
-text-decoration: none;
-letter-spacing: 0.1em;
-color: #212529;
-border-radius: 0.5rem;
-}
-
-a.btn-flat {
-overflow: hidden;
-
-padding: 1.5rem 6rem;
-
-color: #fff;
-border-radius: 0;
-background: #000;
-}
-
-a.btn-flat span {
-position: relative;
-}
-
-a.btn-flat:before {
-position: absolute;
-top: 0;
-left: 0;
-
-width: 150%;
-height: 500%;
-
-content: "";
--webkit-transition: all 0.5s ease-in-out;
-transition: all 0.5s ease-in-out;
--webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
-transform: translateX(-98%) translateY(-25%) rotate(45deg);
-
-background: #00b7ee;
-}
-
-a.btn-flat:hover:before {
--webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
-transform: translateX(-9%) translateY(-25%) rotate(45deg);
-}
-
-/* login.htmlのログインボタン設定 */
-/*== 波紋がふわっと広がる */
-
-.btnripple3{
-/*波紋の基点とするためrelativeを指定*/
-position: relative;
-/*リンクの形状*/
-display:inline-block;
-margin:0 10px 20px 10px;
-text-decoration: none;
-color: #333;
-outline: none;
-}
-
-/*波形の設定*/
-.btnripple3:hover::before {
-content: '';
-/*絶対配置で波形の位置を決める*/
-position: absolute;
-left:30%;
-top:0;
-/*波形の形状*/
-border: 1px solid #333;
-width: 60px;
-height: 60px;
-border-radius: 50%;
-/*はじめは不透明*/
-opacity:1;
-/*アニメーションの設定*/
-animation:1s circleanime2 forwards;
-}
-
-/*波形が広がるアニメーション*/
-@keyframes circleanime2{
-0%{
-transform: scale(0);
-}
-100%{
-transform:scale(2);
-opacity: 0;
-}
-}
-
-/*矢印の設定*/
-.btnripple3::after {
-content: '';
-/*絶対配置で矢印の位置を決める*/
-position: absolute;
-top: 30%;
-right: -20px;
-/*矢印の形状*/
-width: 5px;
-height: 5px;
-border-top: 1px solid #000;
-border-right: 1px solid #000;
-transform: rotate(45deg);
 }
