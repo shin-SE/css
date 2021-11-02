@@ -2,60 +2,71 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<link rel="stylesheet" href="main.css">
-	<title>掲示板新規登録ページ | シン・システムエンジニア</title>
+	<link rel="stylesheet" href="../CSS/index.css">
+	<title>Bullentin board | Sin・System Engineers</title>
 </head>
 	
 	
 	
 <body>
-	<!-- 背景アニメーション設定 -->
-	<div class="bg"></div>
-	<div class="bg"></div>
-	<div class="bg bg2"></div>
-	<div class="bg bg3"></div>
-	<div class="content">
-  
-		
-		
-		<!-- ヘッダー設定 -->
-		<header>
-  			<h1 class="headline"><a>新規登録</a></h1>
-  		</header>
-		
-		
-		
-		
-		<!-- 認証コード入力設定 -->
-        <form action="" method="post">
-            <label>メールアドレスを入力してください。</label><br>
-            <input type="email" name="email-address" value="" placeholder="xxxx@example.com"><br><br>
-            <input type="submit"><br><br>
-            <p>利用規約を必ずお読みください。</p><br>
-            <label><input type="checkbox" name="terms of service">利用規約を確認しました。</label>
-        </form>
-
-		
-		
-
-        
-		
-		<!-- ボタン設定 -->
-		<a href="index.html" class="btnripple3"><span>戻る</span></a>
-		<a href="sign up2.html" class="btnripple3"><span>次へ</span></a>
-
-        <!-- フッター設定 -->
-		<footer>
-			<a href="" class="btnripple3">よくある質問</a><br>
-			<a href="" class="btnripple3">利用規約</a><br>
-			<p>管理者メールアドレス<br>
-				2021@SYSTEM ENGINEERS.com
-			</p><br>
-			<p>Copyright © 2021 SIN・SYSTEM ENGINEERS All Rights Reserved.</p>
-		</footer>
-	</div>
+	<!-- ヘッダー設定 -->
+	<header>
+		<h1>Bullentin Board</h1>
+		<nav class="gnav">
+			<ul class="menu">
+				<li><a href="index.html">Top</a></li>
+				<li><a href="sign up2.html">Next</a></li>
+			</ul>
+			<form  class="formidx" action="" method="post">
+				<input type="text" name="coad" size="30" placeholder="Search">
+				<button type="submit">Search</button>
+			</form>
+		</nav>
+	</header>
 	
+	<!-- 認証コード入力設定 -->
+	<section>
+		<form action="" method="post">
+			<label>Please enter your e-mail address.</label><br>
+			<input type="email" name="email-address" value="" placeholder="xxxx@example.com"><br><br>
+			<input type="submit"><br><br>
+			<p>Please be sure to read the terms of use.</p><br>
+			<label><input type="checkbox" name="terms of service">I checked the terms of use.</label>
+		</form>
+		
+	</section>
 	
-	
+    <!-- フッター設定 -->
+	<footer>
+		<div class="foot-wrap">
+			<div class="menu-left">
+				<h3>Questions</h3>
+				<ul class="foot-left">
+					<li><a href="#">ABC</a></li>
+					<li><a href="#">DEF</a></li>
+					<li><a href="#">GHI</a></li>
+				</ul>
+			</div>
+			<div class="menu-center">
+				<h3>Terms Of Service</h3>
+				<ul class="foot-center">
+					<li><a href="#">123</a></li>
+					<li><a href="#">456</a></li>
+					<li><a href="#">789</a></li>
+				</ul>
+			</div>
+			<div class="menu-right">
+				<h3>menu</h3>
+				<ul class="foot-right">
+					<li><a href="#">menu1</a></li>
+					<li><a href="#">menu2</a></li>
+					<li><a href="#">menu3</a></li>
+				</ul>
+			</div>
+			<small class="cmark">©️copyright 2021
+				<a href="#">SIN・SYSTEM ENGINEERS</a>
+			</small>
+		</div>
+	</footer>
 </body>
 </html>
